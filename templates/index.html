@@ -44,17 +44,33 @@
         <div id="project-weather-now" class="col album-object">
             <div class="card shadow-sm">
                 <img class="project-thumb" src="/static/img/weather-now.png">
-              <div class="card-body">
-                <p class="card-text">A weather website that requests information from OpenWeatherMap.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <a href="https://github.com/orangethewell/weather-now" type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-github"></i> Code</a>
-                    <a target="_blank" href="https://weather-now-bay-beta.vercel.app/" type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-globe"></i> Web</a>
-                  </div>
-                  <small class="text-body-secondary commit-message ms-5 m-md-0">0 mins</small>
+                <div class="card-body">
+                    <p class="card-text">A weather website that requests information from OpenWeatherMap.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a href="https://github.com/orangethewell/weather-now" type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-github"></i> Code</a>
+                            <a target="_blank" href="https://weather-now-bay-beta.vercel.app/" type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-globe"></i> Web</a>
+                        </div>
+                    <small class="text-body-secondary commit-message ms-5 m-md-0">0 mins</small>
+                    </div>
                 </div>
-              </div>
             </div>
+        </div>
+        <div id="project-listing-tool" class="col album-object">
+            <div class="card shadow-sm">
+                <img class="project-thumb" src="/static/img/listing-tool.png">
+                <div class="card-body">
+                    <p class="card-text">A listing tool for fellow web surfers.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a href="https://github.com/orangethewell/listing-tool" type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-github"></i> Code</a>
+                            <a target="_blank" href="https://orangethewell.github.io/listing-tool/" type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-globe"></i> Web</a>
+                        </div>
+                    <small class="text-body-secondary commit-message ms-5 m-md-0">0 mins</small>
+                    </div>
+                </div>
+            </div>
+        </div>
 <script>
     var i = 0;
     var current_txt = "I'm Orangethewell"; /* The text */
@@ -88,6 +104,7 @@
 
     fetchLastCommit("orangethewell", "watcher-time", "project-watcher-time")
     fetchLastCommit("orangethewell", "weather-now", "project-weather-now")
+    fetchLastCommit("orangethewell", "listing-tool", "project-listing-tool")
 
     function typeWriter() {
         if (i < current_txt.length) {
