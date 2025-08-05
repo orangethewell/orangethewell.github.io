@@ -1,0 +1,34 @@
+{
+    "language": {
+        "code": "pt-BR",
+        "url": "pt"
+    },
+    "home": {
+        "language": "idioma",
+        "preferences": "Preferências",
+        "navigation": "Navegação",
+        "updates": "Atualizações",
+        "link_back": "Meu button!",
+        "links": {
+            "home": "Início",
+            "blog": "Blog",
+            "guestbook": "Livro de visitas"
+        },
+        "languages": {
+            "pt_br": "Português (brasil)",
+            "en": "Inglês"
+        }
+    },
+    "blog": {
+        "title": "Arquivo Laranja",
+        "back": "Voltar para Início",
+        "archive": "Arquivo",
+        "all": "Todos os Posts",
+        "next": "Próximo Post",
+        "prev": "Post Anterior",
+        "recent": "Posts Recentes",
+        "post": {
+            "back":"Voltar para Blog"
+        }
+    }
+}

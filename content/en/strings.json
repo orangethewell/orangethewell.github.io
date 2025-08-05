@@ -1,0 +1,34 @@
+{
+    "language": {
+        "code": "en",
+        "url": "en"
+    },
+    "home": {
+        "language": "language",
+        "preferences": "Preferences",
+        "navigation": "Navigation",
+        "updates": "Updates",
+        "link_back": "Link me!",
+        "links": {
+            "home": "Home",
+            "blog": "Blog",
+            "guestbook": "Guestbook"
+        },
+        "languages": {
+            "pt_br": "Portuguese (brazil)",
+            "en": "English"
+        }
+    },
+    "blog": {
+        "title": "Orange's Archive",
+        "back": "Go back",
+        "archive": "Archive",
+        "all": "All Posts",
+        "next": "Next post",
+        "prev": "Previous Post",
+        "recent": "Recent Posts",
+        "post": {
+            "back":"Go back to Blog"
+        }
+    }
+}

@@ -1,0 +1,1 @@
+Learning some japonese, and I posted a video of how I made this beautiful picture from Jade, my OC from [Stellarbonds](https://www.wattpad.com/story/346713216-stellarbonds), you can see the video by [clicking here](https://youtu.be/lfCXekR8Qis).

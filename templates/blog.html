@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="{{ strings.language.code }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange's Museum | Blog</title>
+    <link rel="icon" type="image/gif" href="{{ url_for('static', filename='img/ico.gif') }}">
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+            <ul>
+                <li><a href="/{{ strings.language.url }}/">
+                    << {{ strings.blog.back }}</a>
+                </li>
+                <li><a href="/{{ strings.language.url }}/blog/archive/">
+                    {{ strings.blog.archive }}</a>
+                </li>
+            </ul>
+            <p>{{ strings.blog.title }}</p>
+        </header>
+        <hr>
+        <div id="content">
+            <div id="banner">
+                <span id="site-title">Orange's Archive</span>
+            </div>
+            {{ blog_index_content | safe }}
+        </div>
+        <div id="recentpostlistdiv">
+            <h2>{{ strings.blog.recent }}</h2>
+            <ul>
+                {% for post in recent_posts %}
+                <li><a href="{{ post.url }}">{{ post.date }} » {{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <footer id="footer">
+            &copy; 2025 Orangethewell — Inspired by <a href="https://zonelets.net/">zonelets.net</a>.
+        </footer>
+    </div>
+    <!-- THIS IS THE CSS !-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'CHNOPixel-Italic';
+            src: url("{{ url_for('static', filename='CHNOPixelCodePro-Italic.woff') }}") format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* corpo */
+        body {
+            font-family: serif;
+            image-rendering: pixelated;
+            background: url('/static/img/bg_purplePaper.png');
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        #banner {
+            position: relative;
+            width: 100%;
+            background-color: var(--content);
+            height: 150px;
+            background-image: url("/static/img/anime_374.jpg");
+            background-size: 100%;
+            background-position: 0px -10px;
+        }
+
+        #site-title {
+            font-size: xx-large;
+            font-family: 'CHNOPixel-Italic';
+            width: 100%;
+            background: linear-gradient(to top, #4e1900, #0000);
+            position: absolute;
+            color: #ffcea1;
+            bottom: 0;
+            right: 0;
+            text-align: right;
+            padding: 20px;
+            text-shadow: #2C0000 2px 2px 4px;
+        }
+
+        /* container central */
+        #container {
+            max-width: 800px;
+            margin: 2em auto;
+            background: #fff;
+            border: 4px solid #ff7d03;
+            border-style: ridge;
+            box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+        }
+
+        /* cabeçalho e menu */
+        #header {
+            background: #600000;
+            color: #ffcba4;
+            padding: .5em 1em;
+            display: flex;
+        }
+
+        #header ul {
+            list-style: none;
+            display: flex;
+            flex: 1 1;
+            gap: 1em;
+        }
+
+        #header a {
+            color: #ffb876;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        #header a:hover {
+            color: #ff3e03;
+        }
+
+        /* linha divisória abaixo do menu */
+        #header+hr {
+            border: 0;
+            border-top: 4px solid #ff7d03;
+            border-style: ridge;
+        }
+
+        /* conteúdo principal */
+        #content {
+            padding: 1.5em;
+            font-size: 1em;
+            color: #330000;
+        }
+
+        /* lista de posts recentes */
+        #recentpostlistdiv {
+            padding: 1em;
+            background: #ffefdc;
+            border-top: 1px solid #ffb876;
+        }
+
+        #recentpostlistdiv ul {
+            list-style: none;
+        }
+
+
+        #recentpostlistdiv a {
+            color: #600000;
+            text-decoration: none;
+        }
+
+        #recentpostlistdiv a:hover {
+            background-color: #ffbda8;
+        }
+
+        /* rodapé */
+        #footer {
+            padding: 1em;
+            font-size: .9em;
+            background: #ffefdc;
+            text-align: center;
+            border-top: 1px solid #ffb876;
+            color: #600000;
+        }
+    </style>
+</body>
+
+</html>

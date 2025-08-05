@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Orange's Museum</title>
+  <link rel="icon" type="image/gif" href="{{ url_for('static', filename='img/ico.gif') }}">
+  <style>
+    :root {
+      --bg-paper: url("/static/img/redbrick.png");
+      --win-bg: #cfcfcf;
+      --win-border: #000080;
+      --win-titlebar: #0000a0;
+      --win-titlebar-accent: #7878ee;
+      --win-title-color: #fff;
+      --btn-bg: #e0e0e0;
+      --btn-border: #606060;
+      --btn-symbol: #000;
+      --accent: #ff7d03;
+      --high-accent: #ffb876;
+    }
+
+    @font-face {
+      font-family: 'CHNOPixel-Italic';
+      src: url("/static/CHNOPixelCodePro-Italic.woff") format('woff');
+    }
+
+    body {
+      margin: 0;
+      font-family: Tahoma, sans-serif;
+      background: #2C0000 var(--bg-paper) fixed;
+      color: var(--accent);
+      image-rendering: pixelated;
+      text-align: center;
+    }
+
+    #container {
+      max-width: 600px;
+      margin: 80px auto;
+    }
+
+    #site-title {
+      font-family: 'CHNOPixel-Italic';
+      font-size: 2.5em;
+      color: #ffcea1;
+      text-shadow: #2C0000 2px 2px 4px;
+      margin-bottom: 40px;
+    }
+
+    /* Janela estilo Windows XP */
+    .win {
+      background: var(--win-bg);
+      border: 2px solid var(--win-border);
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 4px 4px 0 rgba(0,0,0,.3);
+    }
+    .win .titlebar {
+      background: #3030bf;
+      background: linear-gradient(180deg,rgba(48, 48, 191, 1) 0%, rgba(0, 0, 160, 1) 23%, rgba(0, 0, 160, 1) 78%, rgba(120, 120, 238, 1) 100%);color: var(--win-title-color);
+      padding: 4px 8px;
+      font-size: 0.9em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .win .titlebar .buttons {
+      display: flex;
+    }
+    .win .titlebar .btn {
+      width: 16px; height: 16px;
+      margin-left: 4px;
+      background: var(--btn-bg);
+      border: 1px solid var(--btn-border);
+      position: relative;
+      cursor: default;
+    }
+    .win .titlebar .btn:hover {
+      background: #e8e8e8;
+    }
+    /* símbolos - close and minimize */
+    .win .titlebar .btn.min:after {
+      content: "_";
+      position: absolute;
+      top: -2px; left: 4px;
+      font-size: 12px;
+      color: var(--btn-symbol);
+    }
+    .win .titlebar .btn.close:after {
+      content: "×";
+      position: absolute;
+      top: -4px; left: 2px;
+      font-size: 18px;
+      color: var(--btn-symbol);
+    }
+
+    .win .content {
+      padding: 20px;
+      font-size: 1em;
+      color: black;
+    }
+
+    .lang-button {
+      display: inline-block;
+      background-color: var(--btn-bg);
+      border: 2px solid var(--btn-border);
+      color: var(--btn-symbol);
+      font-size: 1.1em;
+      padding: 8px 16px;
+      margin: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #808080;
+      transition: transform 0.1s;
+    }
+    .lang-button:active {
+      transform: translate(1px,1px);
+      box-shadow: inset -1px -1px 0 #fff, inset 1px 1px 0 #808080;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: var(--high-accent);
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="site-title">
+      <img src="/static/img/UJVUeER.gif" height="40" style="vertical-align: middle; margin-right: 8px;">
+      Orange's Museum
+    </div>
+
+    <div class="win">
+      <div class="titlebar">
+        <span>Select Language</span>
+        <div class="buttons">
+          <div class="btn min"></div>
+          <div class="btn close"></div>
+        </div>
+      </div>
+      <div class="content">
+        <p style="margin-bottom: 12px;">View website in:</p>
+        <a href="/en/" class="lang-button">English</a>
+        <a href="/pt/" class="lang-button">Português</a>
+      </div>
+    </div>
+
+    <footer>
+      Orange's Museum © 2025 — Made with ❤️ and GIFs.
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Aprendendo um pouco de japonês nos últimos dias. Eu postei um vídeo de como foi feito essa arte linda da Jade, a personagem principal da minha história, [Stellarbonds](https://www.wattpad.com/story/346713216-stellarbonds), você pode ver o vídeo [clicando aqui](https://youtu.be/lfCXekR8Qis).

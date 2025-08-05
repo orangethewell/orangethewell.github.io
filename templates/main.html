@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="{{ strings.language.code }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange's Museum</title>
+    <link rel="icon" type="image/gif" href="{{ url_for('static', filename='img/ico.gif') }}">
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="headerArea">
+            <div id="header">
+                <span id="site-title"><img src="{{ url_for('static', filename='img/UJVUeER.gif') }}" / height=40
+                        style="margin: -5px 10px;">Orange's
+                    Museum</span>
+            </div>
+            <nav id="navbar">
+                <ul id="marquee">
+                    <li><img src="{{ url_for('static', filename='img/buttons/anime_eyes.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/antinft.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/brasil.png') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/funny.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/gameboy.png') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/jojo.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/krisbtn.png') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/lain.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/minecraft.png') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/mundomanga.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/neocities-org.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/paws.png') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/pictochat.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/reisen.png') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/unknown-2.png') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/vscbutton.gif') }}" /></li>
+                    <li><a href="https://ynoproject.net/"><img src="{{ url_for('static', filename='img/buttons/yumenikki5.gif') }}" /></a></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/anime_eyes.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/antinft.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/brasil.png') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/funny.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/gameboy.png') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/jojo.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/krisbtn.png') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/lain.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/minecraft.png') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/mundomanga.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/neocities-org.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/paws.png') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/pictochat.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/reisen.png') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/unknown-2.png') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/vscbutton.gif') }}" /></li>
+                    <li><img src="{{ url_for('static', filename='img/buttons/yumenikki5.gif') }}" /></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="flex">
+            <aside id="leftSidebar">
+                <h2 class="header-box">{{ strings.home.navigation }}</h2>
+                <ul class="navlist">
+                    <li><a href="/{{ strings.language.url }}/">{{ strings.home.links.home }}</a></li>
+                    <li><a href="/{{ strings.language.url }}/blog/">{{ strings.home.links.blog }}</a></li>
+                    <li><a href="/{{ strings.language.url}}/guestbook/">{{ strings.home.links.guestbook }}</a></li>
+                </ul>
+                <hr style="border-color: var(--accent);"/>
+                <h2>{{ strings.home.preferences }}</h2>
+                <div id="language-select" style="margin-bottom: 20px;">
+                    <label for="language"><strong>{{ strings.home.language }}</strong></label>
+                    <select id="language" name="language">
+                        <option value="en">{{ strings.home.languages.en }}</option>
+                        <option value="pt-br">{{ strings.home.languages.pt_br }}</option>
+                    </select>
+                </div>
+                <script>
+                    // Set the select to match the current language in the URL
+                    var select = document.getElementById('language');
+                    if (window.location.pathname.includes('en/')) {
+                        select.value = 'en';
+                    } else if (window.location.pathname.includes('pt/')) {
+                        select.value = 'pt-br';
+                    }
+
+                    select.addEventListener('change', function () {
+                        var lang = this.value;
+                        if (lang === 'en') {
+                            window.location.href = '/en/';
+                        } else if (lang === 'pt-br') {
+                            window.location.href = '/pt/';
+                        }
+                    });
+                </script>
+            </aside>
+            <main>
+                {{ main_content|safe }}
+            </main>
+            <aside id="rightSidebar">
+                <h2 class="header-box">{{ strings.home.link_back }}</h2>
+                <div style="display: flex; align-items: center; justify-content: center; padding: 10px; flex-direction: column; gap: 8px">
+                <img src="/static/img/88x31.gif"/>
+                <textarea><a href="https://orangethewell.neocities.org/"><img src="https://files.catbox.moe/48l41u.gif"/></a></textarea>
+                </div>
+            </aside>
+        </div>
+        <footer id="footer">Orange's Museum &copy; 2025 Orangethewell</footer>
+    </div>
+    <!-- THIS IS THE CSS !-->
+    <style>
+        /* user styles */
+
+        :root {
+            --header-image: url("{{ url_for('static', filename='img/anime_305.jpg') }}");
+            --body-bg-image: url("{{ url_for('static', filename='img/redbrick.png') }}");
+
+
+            /* cores vermelho-escuro */
+            --content: #600000;
+            /* vermelho-escuro */
+            --mid: #ff3e03;
+            --accent: #ff7d03;
+            /* laranja pastel */
+            --high-accent: #ffb876;
+        }
+
+        textarea {
+            background-color: transparent;
+            border: 1px solid var(--mid);
+            color: var(--mid)
+        }
+
+        @font-face {
+            font-family: 'CHNOPixel-Italic';
+            src: url("{{ url_for('static', filename='CHNOPixelCodePro-Italic.woff') }}") format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        i.pixel-italy {
+            font-family: 'CHNOPixel-Italic';
+        }
+
+        body {
+            font-family: ms ui gothic, Tahoma, sans-serif;
+            margin: 0;
+            background-color: #2C0000;
+            /* quase preto com subtom vermelho */
+            background-size: 65px;
+            color: var(--accent);
+            /* texto em vermelho-escuro pastel */
+            background-image: var(--body-bg-image);
+            image-rendering: pixelated;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .header-box {
+            border: 1px solid var(--accent);
+            padding: 4px;
+            border-radius: 8px;
+            margin-bottom: 4px;
+            background: linear-gradient(to top, var(--mid), #0000);
+        }
+
+        .navlist {
+            margin: 0;
+            padding-left: 24px;
+            list-style-image: url("{{ url_for('static', filename='img/list-ico.gif') }}");
+        }
+
+        .navlist li {
+            padding-bottom: 5px;
+        }
+
+        .navlist li a:hover {
+            color: var(--high-accent) !important;
+            text-decoration-style: wavy;
+        }
+
+        #container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* links gerais */
+        #container a {
+            color: var(--mid);
+            /* vermelho-escuro */
+            font-weight: bold;
+        }
+
+        #header {
+            position: relative;
+            width: 100%;
+            background-color: var(--content);
+            height: 150px;
+            background-image: var(--header-image);
+            background-size: 100%;
+            transition: background-position 500ms ease;
+            background-position: 0px -140px;
+        }
+
+        #site-title {
+            font-size: xx-large;
+            font-family: 'CHNOPixel-Italic';
+            width: 100%;
+            background: linear-gradient(to top, #4e1900, #0000);
+            position: absolute;
+            color: #ffcea1;
+            bottom: 0;
+            left: 0;
+            padding: 20px;
+            text-shadow: #2C0000 2px 2px 4px;
+        }
+
+        /* navegação */
+        #navbar {
+            height: 50px;
+            background-color: #3A0000;
+            /* um pouco mais claro que o body */
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        #marquee {
+            display: flex;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            width: max-content;
+            /* abrange todos os itens */
+            animation: marquee 30s linear infinite;
+            list-style: none;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(-1.6%);
+            }
+
+            to {
+                transform: translateX(-51%);
+            }
+
+        }
+
+        #marquee:hover {
+            animation-play-state: paused;
+        }
+
+        #flex {
+            display: flex;
+        }
+
+        aside {
+            background-color: #400000;
+            /* tom intermediário */
+            width: 200px;
+            padding: 20px;
+            font-size: smaller;
+        }
+
+        main {
+            background-color: var(--content);
+            flex: 1;
+            padding: 20px;
+            order: 2;
+        }
+
+        #leftSidebar {
+            order: 1;
+        }
+
+        #rightSidebar {
+            order: 3;
+        }
+
+        footer {
+            background-color: #3A0000;
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--high-accent);
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        strong {
+            color: var(--high-accent);
+        }
+
+        .box {
+            background-color: #3A0000;
+            border: 1px solid var(--accent);
+            padding: 10px;
+        }
+
+        #topBar {
+            width: 100%;
+            height: 30px;
+            padding: 10px;
+            font-size: smaller;
+            background-color: #3A0000;
+        }
+
+        @media only screen and (max-width: 800px) {
+            #flex {
+                flex-wrap: wrap;
+            }
+
+            aside {
+                width: 100%;
+            }
+
+            #header {
+                background-position: 0px -80px;
+            }
+
+            main {
+                order: 1;
+            }
+
+            #leftSidebar {
+                order: 2;
+            }
+
+            #rightSidebar {
+                order: 3;
+            }
+        }
+    </style>
+</body>
+
+</html>
