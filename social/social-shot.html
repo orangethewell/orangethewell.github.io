@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1200, initial-scale=1" />
+    <title>Imagem de compartilhamento — Wellington Guimarães Jr.</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { width: 1200px; height: 630px; margin: 0; }
+      body { overflow: hidden; font-family: Arial, Helvetica, sans-serif; color: #242621; }
+      .shot {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background:
+          radial-gradient(ellipse 640px 460px at 1% 0%, rgba(230, 152, 72, .37), transparent 70%),
+          radial-gradient(ellipse 600px 360px at 100% 4%, rgba(233, 163, 94, .25), transparent 72%),
+          radial-gradient(ellipse 580px 410px at 65% 46%, rgba(255, 255, 255, .94), transparent 90%),
+          #eeefec;
+      }
+      .texture {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .34;
+      }
+      .brand {
+        position: absolute;
+        z-index: 5;
+        left: 53px;
+        top: 35px;
+        display: flex;
+        align-items: center;
+        gap: 13px;
+      }
+      .brand img { width: 35px; height: 36px; object-fit: contain; }
+      .brand span {
+        color: #626962;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+      }
+      .brand .year { color: #a36d3d; }
+      .orbit {
+        position: absolute;
+        z-index: 1;
+        left: 375px;
+        top: 135px;
+        width: 845px;
+        height: 455px;
+        overflow: visible;
+      }
+      .orbit ellipse { fill: none; stroke: #db9f61; stroke-width: 1.3px; opacity: .63; }
+      .portrait {
+        position: absolute;
+        z-index: 2;
+        width: 565px;
+        height: auto;
+        left: 603px;
+        top: 45px;
+        filter: drop-shadow(0 22px 24px rgba(58, 48, 37, .12));
+      }
+      .symbol {
+        position: absolute;
+        z-index: 4;
+        display: grid;
+        place-items: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 13px;
+        font-size: 29px;
+        line-height: 1;
+      }
+      .symbol.sparkle { left: 509px; top: 224px; color: #ae7590; background: #f4e4eb; }
+      .symbol.paw { right: 94px; bottom: 96px; background: #f6c93e; overflow: hidden; }
+      .symbol.paw img { width: 100%; height: 100%; object-fit: cover; }
+      .card {
+        position: absolute;
+        z-index: 6;
+        left: 52px;
+        top: 90px;
+        width: 455px;
+        height: 500px;
+        padding: 38px 38px 30px;
+        border: 1px solid #d8d5ca;
+        background: rgba(255, 253, 250, .97);
+        box-shadow: 0 24px 54px rgba(51, 46, 35, .13);
+      }
+      .eyebrow {
+        margin: 0 0 31px;
+        color: #a16d3e;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: .19em;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 0;
+        font-size: 68px;
+        font-weight: 800;
+        letter-spacing: -.075em;
+        line-height: .94;
+      }
+      h1 em {
+        color: #d87822;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-weight: 400;
+        letter-spacing: -.07em;
+      }
+      .description {
+        width: 344px;
+        margin: 28px 0 0;
+        color: #526056;
+        font-size: 19px;
+        line-height: 1.38;
+      }
+      .rule { width: 44px; height: 3px; margin: 27px 0 14px; background: #d87822; }
+      .signature { margin: 0; font-size: 21px; font-weight: 800; letter-spacing: -.035em; }
+      .address {
+        position: absolute;
+        left: 38px;
+        bottom: 27px;
+        margin: 0;
+        color: #879087;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .17em;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shot" aria-label="Wellington Guimarães Jr. — Bora criar algo bacana? Sites e experiências digitais que dão personalidade ao seu negócio.">
+      <svg class="texture" viewBox="0 0 1200 630" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <pattern id="crosses" width="27" height="27" patternUnits="userSpaceOnUse">
+            <path d="M13.5 9.5v8m-4-4h8" fill="none" stroke="#bd916b" stroke-width="1.2" />
+          </pattern>
+          <pattern id="dots" width="43" height="43" patternUnits="userSpaceOnUse">
+            <circle cx="4" cy="5" r="1.1" fill="#bd916b" />
+            <circle cx="19" cy="25" r=".8" fill="#bd916b" />
+            <circle cx="34" cy="37" r=".7" fill="#bd916b" />
+          </pattern>
+          <linearGradient id="crossFade" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="white" stop-opacity=".9" />
+            <stop offset="1" stop-color="white" stop-opacity=".15" />
+          </linearGradient>
+          <mask id="textureMask"><rect width="1200" height="630" fill="url(#crossFade)" /></mask>
+        </defs>
+        <g mask="url(#textureMask)">
+          <rect width="1200" height="630" fill="url(#crosses)" />
+          <rect width="1200" height="630" fill="url(#dots)" />
+        </g>
+      </svg>
+      <div class="brand"><img src="../assets/icon-black.png" alt="" /><span>Portfólio <span class="year">/ 2026</span></span></div>
+      <svg class="orbit" viewBox="0 0 845 455" aria-hidden="true"><ellipse cx="420" cy="235" rx="414" ry="156" transform="rotate(15 420 235)" /></svg>
+      <div class="symbol sparkle" aria-hidden="true">✧</div>
+      <img class="portrait" src="../assets/img-hero.webp" alt="" />
+      <div class="symbol paw" aria-hidden="true"><img src="../assets/ecaonomia-brand.webp" alt="" /></div>
+      <section class="card">
+        <p class="eyebrow">Sites e experiências digitais</p>
+        <h1>Bora criar<br />algo<br /><em>bacana</em>?</h1>
+        <p class="description">Sites e experiências digitais que dão personalidade ao seu negócio.</p>
+        <div class="rule"></div>
+        <p class="signature">Wellington Guimarães Jr.</p>
+        <p class="address">orangethewell.github.io ↗</p>
+      </section>
+    </main>
+  </body>
+</html>
